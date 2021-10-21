@@ -15,5 +15,8 @@ class Car extends Model
     //protected $dateFormat = 'h:m:s';  //For chaing the default date format
     protected $fillable = ['name', 'founded', 'description'];
 
-    
+    public function carModels()
+    {
+        return $this->hasMany(CarModel::class);
+    }
 }
